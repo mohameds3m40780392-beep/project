@@ -1,0 +1,106 @@
+/* تنسيقات عامة */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+/* الحاوية الرئيسية */
+.login-container {
+    background: #fff;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+h2 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+p {
+    color: #777;
+    margin-bottom: 30px;
+}
+
+/* حقول الإدخال */
+.input-group {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.input-group i {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #764ba2;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px 45px 12px 15px; /* مسافة أيمن للأيقونة */
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    outline: none;
+    transition: 0.3s;
+    text-align: right;
+}
+
+.input-group input:focus {
+    border-color: #764ba2;
+    box-shadow: 0 0 8px rgba(118, 75, 162, 0.2);
+}
+
+/* الأزرار */
+.login-btn {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background: #764ba2;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 10px;
+}
+
+.login-btn:hover {
+    background: #5a377d;
+    transform: translateY(-2px);
+}
+
+/* الروابط السفلية */
+.footer-links {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #777;
+}
+
+.footer-links a {
+    color: #764ba2;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/* عرض رسائل الخطأ */
+.error-msg {
+    color: #e74c3c;
+    font-size: 13px;
+    margin-bottom: 15px;
+    text-align: right;
+    display: block;
+}

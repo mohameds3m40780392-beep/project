@@ -1,0 +1,269 @@
+.tape {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 5%;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* ظل خفيف تحت الهيدر */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo img {
+    height: 40px; /* تكبير اللوجو قليلاً */
+}
+
+/* تنسيق مربع البحث */
+.search-container {
+    flex-grow: 1;
+    margin: 0 30px;
+    position: relative;
+    max-width: 600px;
+}
+
+#search {
+    width: 100%;
+    padding: 10px 15px;
+    border: 1px solid #eee;
+    border-radius: 25px; /* حواف دائرية مثل الصورة */
+    background-color: #f8f8f8;
+    outline: none;
+}
+
+.search-icon {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #999;
+}
+
+/* تنسيق الأزرار (Sell & Sign In) */
+.sell-btn, .sign-in-btn {
+    background-color: #6c5ce7; /* اللون البنفسجي في الصورة */
+    color: white;
+    padding: 8px 18px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.sell-btn:hover, .sign-in-btn:hover {
+    background-color: #a29bfe;
+}
+
+/* تنسيق الأيقونات */
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.icons-group {
+    display: flex;
+    gap: 15px;
+}
+
+.icon {
+    width: 22px;
+    height: 22px;
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+.icon:hover {
+    opacity: 1;
+}
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f4f9;
+}
+
+
+.hero-section {
+    height: 80vh;
+    background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%); /* تدرج بنفسجي وأزرق */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: white;
+    padding: 0 5%;
+}
+
+.hero-content { max-width: 500px; }
+
+.hero-content h1 { font-size: 3rem; margin-bottom: 0; }
+
+.btn-start {
+    padding: 12px 30px;
+    background: white;
+    color: #6a11cb;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.product-card {
+    background: white;
+    color: #333;
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+/* الحركة الافتراضية للكارت */
+.product-card {
+    display: block;
+    text-decoration: none; /* عشان يشيل الخط اللي تحت الكلام بسبب الرابط */
+    color: inherit;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* تحديد مدة ونوع الحركة */
+    will-change: transform; /* لتحسين الأداء في المتصفحات */
+}
+
+/* التأثير لما الماوس ييجي فوقه */
+.product-card:hover {
+    transform: translateY(-10px); /* بيحرك الكارت لفوق 10 بيكسل */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* اختيار اختياري: بيضيف ضل خفيف بيدي إحساس بالارتفاع */
+}
+
+
+.product-card img { width: 200px; border-radius: 10px; }
+
+.badge { color: #f1c40f; display: block; margin-bottom: 10px; font-weight: bold; }
+
+.price { font-weight: bold; color: #2ecc71; }
+
+.container {
+    display: flex;
+    padding: 20px;
+    gap: 20px;
+    background-color: #f4f4f9   ;
+}
+
+/* تنسيق القائمة الجانبية */
+.sidebar {
+    width: 250px;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.filter-group h3 {
+    font-size: 16px;
+    color: #555;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+}
+
+.filter-group ul { list-style: none; padding: 0; }
+.filter-group ul li { padding: 8px 0; color: #777; cursor: pointer; }
+.filter-group label { display: block; padding: 5px 0; color: #666; font-size: 14px; }
+
+/* تنسيق شبكة المنتجات */
+.products-area { flex: 1; }
+
+.top-bar {
+    background: white;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s;
+    border: 1px solid #eee;
+}
+
+.card:hover { transform: translateY(-5px); box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
+
+.img-container {
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    overflow: hidden;
+    text-decoration: none;
+}
+
+
+.card img { max-width: 100%; height: auto; }
+
+.no-reviews { color: #95a5a6; font-size: 12px; }
+.price { font-weight: bold; color: #2c3e50; margin-top: 10px; }
+
+
+.typing-container {
+    display: flex;
+    align-items: center;
+    font-family: sans-serif; /* أو الخط اللي تحبه */
+        animation: blink-caret 0.75s step-end infinite;
+
+}
+
+.cursor {
+    margin-left: 5px;
+    color: white; /* لون المسطرة */
+    animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+
+img
+{
+    width: 110%;
+    height: auto;
+    border-radius: 50%;
+}
+
+.sign-in-btnn
+{
+    width: 40px;
+}
+
+/* هذا الجزء سيحذف الخط من الرابط الأساسي لجميع العناصر بداخله */
+.product-card {
+    text-decoration: none;
+    display: block; /* لضمان أن الرابط يغطي مساحة الكارت بالكامل */
+}
+
+/* للتأكد من أن النصوص والأسعار لا تظهر تحتها خطوط حتى لو ورثت خصائص الرابط */
+.product-card h4,
+.product-card .no-reviews
+{
+    color: #000; /* يمكنك تغيير اللون هنا حسب ما تفضله */
+    text-decoration: none;
+}
+
+.product-card .price
+{
+    color: #2c3e50; /* لون السعر */
+    font-weight: bold;
+    text-decoration: none;
+}
+
